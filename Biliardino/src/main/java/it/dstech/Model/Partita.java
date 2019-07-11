@@ -1,53 +1,54 @@
 package it.dstech.Model;
 
-public class Partita {
-
+public class Partita
+{
 	private Squadra s1;
 	private Squadra s2;
 	private int risultatos1;
 	private int risultatos2;
 
-	public Squadra getS1() {
+	public Squadra getS1()
+	{
 		return s1;
 	}
-
-	public void setS1(Squadra s1) {
+	public void setS1(Squadra s1)
+	{
 		this.s1 = s1;
 	}
-
-	public Squadra getS2() {
+	public Squadra getS2()
+	{
 		return s2;
 	}
-
-	public void setS2(Squadra s2) {
+	public void setS2(Squadra s2)
+	{
 		this.s2 = s2;
 	}
-
-	public int getRisultatos1() {
+	public int getRisultatos1()
+	{
 		return risultatos1;
 	}
-
-	public void setRisultatos1(int risultatos1) {
+	public void setRisultatos1(int risultatos1)
+	{
 		this.risultatos1 = risultatos1;
 	}
-
-	public int getRisultatos2() {
+	public int getRisultatos2()
+	{
 		return risultatos2;
 	}
-
-	public void setRisultatos2(int risultatos2) {
+	public void setRisultatos2(int risultatos2)
+	{
 		this.risultatos2 = risultatos2;
 	}
-
-	public Partita(Squadra s1, Squadra s2) {
+	public Partita(Squadra s1, Squadra s2)
+	{
 		this.s1 = s1;
 		this.s2 = s2;
 		this.risultatos1 = 0;
 		this.risultatos2 = 0;
 	}
-
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj)
+	{
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -71,28 +72,30 @@ public class Partita {
 			return false;
 		return true;
 	}
-
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Partita [squadra 1=" + s1 + ", squadra 2=" + s2 + ", risultato squadra 1=" + risultatos1
 				+ ", risultato squadra 2=" + risultatos2 + "]";
 	}
-
-	public Squadra giocaPartita() {
-
+	public Squadra giocaPartita()
+	{
 		while (risultatos1 != 10 && risultatos2 != 10) {
 			double x = Math.random() * 10;
 			int y = (int) x;
-			if (y % 2 == 0) {
+			if (y % 2 == 0)
+			{
 				risultatos1++;
-			} else {
+			}
+			else
+			{
 				risultatos2++;
 			}
 		}
-		if (risultatos1 == 10) {
+		if (risultatos1 == 10)
+		{
 			return s1;
 		}
 		return s2;
-
 	}
 }
