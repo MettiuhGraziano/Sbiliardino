@@ -1,7 +1,7 @@
 package it.dstech.Model;
 
 public class Partita {
-	
+
 	private Squadra s1;
 	private Squadra s2;
 	private int risultatos1;
@@ -39,10 +39,7 @@ public class Partita {
 		this.risultatos2 = risultatos2;
 	}
 
-	public Partita(Squadra s1, Squadra s2) throws GiocatoreInAltraSquadraException {
-		if(s1.getG1()==s2.getG1() || s1.getG1()==s2.getG2() || s1.getG2()==s2.getG1() || s1.getG2()==s2.getG2()) {
-			throw new GiocatoreInAltraSquadraException();
-		}
+	public Partita(Squadra s1, Squadra s2) {
 		this.s1 = s1;
 		this.s2 = s2;
 		this.risultatos1 = 0;
