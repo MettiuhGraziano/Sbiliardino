@@ -1,6 +1,7 @@
 package it.dstech.Model;
 
 public class Partita {
+	
 	private Squadra s1;
 	private Squadra s2;
 	private int risultatos1;

@@ -38,20 +38,31 @@ public class Giocatore
 	    this.cognome = cognome;
 	  }
 	@Override
-	  public boolean equals(Object obj)
-	  {
-		if (this == obj)
+	public boolean equals(Object obj) {
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (!(obj instanceof Giocatore)) {
 			return false;
+		}
 		Giocatore other = (Giocatore) obj;
-		if (nome == null) {
-			if (other.nome != null)
+		if (cognome == null) {
+			if (other.cognome != null) {
 				return false;
-		} else if (!nome.equals(other.nome))
+			}
+		} else if (!cognome.equals(other.cognome)) {
 			return false;
+		}
+		if (nome == null) {
+			if (other.nome != null) {
+				return false;
+			}
+		} else if (!nome.equals(other.nome)) {
+			return false;
+		}
 		return true;
-	  }
+	}
 }
